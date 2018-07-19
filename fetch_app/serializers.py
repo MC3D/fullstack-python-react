@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from fetch_app.models import Profile
+from fetch_app.models import UserProfileInfo
 
-class ProfileSerializer(serializers.ModelSerializer):
+class UserProfileInfoSerializer(serializers.ModelSerializer):
     class Meta:
         fields = "__all__"
-        model = Profile
+        model = UserProfileInfo

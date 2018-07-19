@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from fetch_app.views import IndexView, ProfileListCreateAPIView
+from fetch_app.views import IndexView, UserProfileInfoListCreateAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
-    path('profiles/',ProfileListCreateAPIView.as_view()),
+    path('profiles/',UserProfileInfoListCreateAPIView.as_view()),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken'))
 ]
