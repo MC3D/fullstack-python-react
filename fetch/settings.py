@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'fetch_app',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'djoser'
 ]
 
 MIDDLEWARE = [
@@ -125,6 +126,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'fetch_app.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 django_heroku.settings(locals())
