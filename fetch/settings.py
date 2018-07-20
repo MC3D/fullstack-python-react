@@ -128,8 +128,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),
-   os.path.join(BASE_DIR, "static/fetch_app/build"),
-   os.path.join(BASE_DIR, "static/fetch_app/build/static"),
+   os.path.join(BASE_DIR, "static/build"),
+   os.path.join(BASE_DIR, "static/build/static"),
 ]
 
 AUTH_USER_MODEL = 'fetch_app.User'

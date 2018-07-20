@@ -14,6 +14,8 @@ class UserProfileInfoForm extends Component {
       usermessage: ''
     }
 
+    console.log(`here ${{process}}`)
+
     this._handleInput = this._handleInput.bind(this);
     this._postUserProfileInfo = this._postUserProfileInfo.bind(this);
   }
@@ -82,7 +84,7 @@ class UserProfileInfoForm extends Component {
         </div>
         <div className = "form-group">
           <span>Preview image</span>
-          <div><img src={this.state.previewImage} alt='user profile image'/></div>
+          <div><img src={this.state.previewImage} alt='preview'/></div>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
